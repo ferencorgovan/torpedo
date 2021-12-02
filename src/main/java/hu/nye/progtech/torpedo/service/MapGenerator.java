@@ -16,7 +16,6 @@ public class MapGenerator {
         int columnNumber;
         boolean horizontal;
         boolean free;
-
         
         LOGGER.info("Generating map");
         for (int i = 0; i < mapLength; i++) {
