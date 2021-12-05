@@ -105,7 +105,9 @@
                     <excludes>
                         <exclude>hu/nye/progtech/torpedo/Main.*</exclude>
                         <exclude>hu/nye/progtech/torpedo/model/*</exclude>
-                        <exclude>hu/nye/progtech/torpedo/Exception/*</exclude>
+                        <exclude>hu/nye/progtech/torpedo/exception/*</exclude>
+                        <exclude>hu/nye/progtech/torpedo/configuration/*</exclude>
+                        <exclude>hu/nye/progtech/torpedo/ui/*</exclude>
                     </excludes>
                 </configuration>
                 <executions>

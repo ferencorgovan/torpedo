@@ -2,6 +2,17 @@
 <game_save>
     <map>
         <item>88</item>
+        <item>43</item>
+        <item>88</item>
+        <item>95</item>
+        <item>95</item>
+        <item>95</item>
+        <item>95</item>
+        <item>95</item>
+        <item>95</item>
+        <item>95</item>
+    </map>
+    <map>
         <item>88</item>
         <item>95</item>
         <item>95</item>
@@ -11,21 +22,10 @@
         <item>95</item>
         <item>95</item>
         <item>95</item>
-    </map>
-    <map>
-        <item>95</item>
-        <item>95</item>
-        <item>95</item>
-        <item>95</item>
-        <item>95</item>
-        <item>95</item>
-        <item>95</item>
-        <item>95</item>
-        <item>95</item>
         <item>95</item>
     </map>
     <map>
-        <item>95</item>
+        <item>88</item>
         <item>95</item>
         <item>95</item>
         <item>95</item>

@@ -19,10 +19,12 @@ public class GameState {
     private static final Logger LOGGER = LoggerFactory.getLogger(GameState.class);
 
     public void playGame() {
+        String input;
         System.out.println("Game started! Type 'help' for commandlist.");
         do {
             System.out.print("Enter a command: ");
-            commandHandler.handleCommand(inputReader.readCommand(), enemyMap, enemyCharMap);
-        } while (!inputReader.readCommand().equals("exit"));
+            input = inputReader.readCommand();
+            commandHandler.handleCommand(input, enemyMap, enemyCharMap);
+        } while (!input.equals("exit"));
     }
 }

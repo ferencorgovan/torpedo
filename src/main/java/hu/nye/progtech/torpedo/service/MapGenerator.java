@@ -12,10 +12,6 @@ public class MapGenerator {
     public MapVO generateMap(int mapLength) {
         boolean[][] map = new boolean[mapLength][mapLength];
         Random r = new Random();
-        int rowNumber;
-        int columnNumber;
-        boolean horizontal;
-        boolean free;
 
         LOGGER.info("Generating map");
         for (int i = 0; i < mapLength; i++) {
@@ -24,10 +20,10 @@ public class MapGenerator {
             }
         }
         for (int i = 5; i > 0; i--) {
-            horizontal = r.nextBoolean();
-            rowNumber = r.nextInt(mapLength);
-            columnNumber = r.nextInt(mapLength);
-            free = true;
+            boolean horizontal = r.nextBoolean();
+            int rowNumber = r.nextInt(mapLength);
+            int columnNumber = r.nextInt(mapLength);
+            boolean free = true;
             if (horizontal) {
                 if (columnNumber + i > mapLength) {
                     columnNumber -= i;

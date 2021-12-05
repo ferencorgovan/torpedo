@@ -78,4 +78,13 @@ public class PlayerScoreRepositoryTest {
         Mockito.verify(preparedStatement).close();
         Mockito.verifyNoMoreInteractions(connection, preparedStatement);
     }
+    @Test
+    public void testCloseShouldCloseConnection() throws Exception {
+        // When
+        underTest.close();
+
+        // Then
+        Mockito.verify(connection).close();
+        Mockito.verifyNoMoreInteractions(connection);
+    }
 }

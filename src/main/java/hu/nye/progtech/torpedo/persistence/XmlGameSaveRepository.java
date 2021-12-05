@@ -6,9 +6,12 @@ import hu.nye.progtech.torpedo.model.CharMap;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Marshaller;
 import jakarta.xml.bind.Unmarshaller;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class XmlGameSaveRepository implements GameSaveRepository {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(XmlGameSaveRepository.class);
     private final Marshaller marshaller;
     private final Unmarshaller unmarshaller;
 
@@ -22,18 +25,19 @@ public class XmlGameSaveRepository implements GameSaveRepository {
         try {
             marshaller.marshal(currentMap, new File("gamesave.xml"));
         } catch (JAXBException e) {
-            e.printStackTrace();
+            LOGGER.error("Error while saving gamestate to XML", e);
+            throw new RuntimeException("Failer to save gamestate", e);
         }
     }
 
     @Override
     public CharMap load() {
         try {
-            return new CharMap(10, (char[][]) unmarshaller.unmarshal(new File("gamesave.xml")));
+            CharMap charMap = (CharMap) unmarshaller.unmarshal(new File("gamesave.xml"));
+            return charMap;
         } catch (JAXBException e) {
             e.printStackTrace();
             throw new RuntimeException("Failed to load the gamesave.");
         }
-
     }
 }

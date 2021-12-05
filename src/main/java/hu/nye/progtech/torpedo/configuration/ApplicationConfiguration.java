@@ -25,6 +25,6 @@ public class ApplicationConfiguration {
 
     //@Bean(destroyMethod = "close")
     //PlayerScoreRepository playerScoreRepository(Connection connection) {
-        //return new PlayerScoreRepository(connection);
+    //return new PlayerScoreRepository(connection);
     //}
 }
