@@ -8,7 +8,7 @@ public class MapPrinter {
     private static final Logger LOGGER = LoggerFactory.getLogger(MapPrinter.class);
 
     public void printMap(MapVO mapVO) {
-        LOGGER.info("Printing charmap");
+        LOGGER.info("Printing map");
         System.out.print("   ");
         for (int i = 'A'; i <= 'J'; i++) {
             System.out.print((char) i + "  ");
@@ -21,5 +21,6 @@ public class MapPrinter {
             }
             System.out.println();
         }
+        System.out.println();
     }
 }

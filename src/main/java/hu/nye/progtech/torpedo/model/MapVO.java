@@ -8,10 +8,20 @@ public final class MapVO {
     private final int mapLength;
     private final boolean[][] map;
 
+    public int getHit() {
+        return hit;
+    }
+
+    public void setHit(int hit) {
+        this.hit = hit;
+    }
+
+    private int hit;
 
     public MapVO(int mapLength, boolean[][] map) {
         this.mapLength = mapLength;
         this.map = deepCopy(map);
+        this.hit = hit;
     }
 
     public int getMapLength() {
@@ -46,6 +56,7 @@ public final class MapVO {
         return "MapVO{" +
                 "mapLength=" + mapLength +
                 ", map=" + Arrays.deepToString(map) +
+                "hit=" + hit +
                 '}';
     }
 

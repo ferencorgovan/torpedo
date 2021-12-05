@@ -16,9 +16,10 @@ public class CharMapPrinter {
         for (int i = 0; i < map.length; i++) {
             System.out.print(i + "  ");
             for (int j = 0; j < map.length; j++) {
-                System.out.print(map[i][j] + " ");
+                System.out.print(map[i][j] + "  ");
             }
             System.out.println();
         }
+        System.out.println();
     }
 }
